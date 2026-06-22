@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentação - Assessor de Advogado IA</title>
+<link rel="icon" href="favicon-32.png" sizes="32x32"><link rel="apple-touch-icon" href="favicon-180.png">
+<style>
+:root{--azul:#0b5fff;--navy:#0a2540;--cinza:#5a6b7b;--linha:#e6eaf0;}
+*{box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--navy);line-height:1.7;margin:0;background:#f7f9fc}
+.wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+header{border-bottom:3px solid var(--azul);padding-bottom:16px;margin-bottom:8px}
+header .marca{display:flex;align-items:center;gap:12px}
+header .marca .dot{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,#1e6bff,#0a45cc)}
+header .marca b{font-size:18px}
+h1{font-size:30px;line-height:1.25;margin:28px 0 8px}
+h2{font-size:21px;margin:34px 0 10px;color:var(--navy)}
+h3{font-size:17px;margin:24px 0 6px}
+p,li{font-size:16px}
+a{color:var(--azul);word-break:break-word}
+blockquote{border-left:4px solid var(--linha);margin:16px 0;padding:4px 16px;color:var(--cinza);background:#fff}
+code{background:#eef2f8;padding:2px 6px;border-radius:6px;font-size:14px}
+hr{border:0;border-top:1px solid var(--linha);margin:28px 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--linha);color:var(--cinza);font-size:14px}
+</style></head><body><div class="wrap">
+<header><div class="marca"><span class="dot"></span><b>Assessor de Advogado IA</b></div></header>
+<h1>Assessor de Advogado IA: Guia de Configuração e Uso</h1>
+<p>Este guia explica o que é o conector, como conectá-lo e como utilizá-lo no dia a dia.</p>
+<h2>O que é</h2>
+<p>O Conector Jurídico é um servidor sob o Model Context Protocol (MCP) que entrega, dentro do seu cliente de inteligência artificial, um conjunto de procedimentos jurídicos brasileiros prontos para uso. Ele funciona como um assessor: você descreve a tarefa em linguagem natural e o conector fornece o roteiro de trabalho que a inteligência artificial seguirá para produzir a peça ou a análise.</p>
+<p>O conector cobre os seguintes procedimentos: petição inicial, contestação, réplica, recurso, contrarrazões, alegações finais, preparação de audiência, Tribunal do Júri, sustentação oral, pesquisa de jurisprudência, análise jurídica, correção de texto, explicação em linguagem simples, demandas diversas e geração de peças em lote.</p>
+<h2>A quem se destina</h2>
+<p>A advogados, defensores e demais profissionais da área jurídica que já utilizam um cliente de inteligência artificial e desejam padronizar e acelerar a produção de peças com qualidade técnica.</p>
+<h2>Requisitos</h2>
+<p>Você precisa de um cliente de inteligência artificial compatível com conectores MCP e de uma conta de acesso autorizada ao serviço, obtida com a aquisição do curso correspondente. Para adicionar um conector personalizado por endereço, é necessário um plano que ofereça esse recurso. Quando o conector estiver publicado no diretório oficial, ele poderá ser adicionado de forma direta, conforme as condições do seu cliente.</p>
+<h2>Como conectar</h2>
+<ol>
+<li>Abra as configurações de conectores do seu cliente de inteligência artificial.</li>
+<li>Escolha adicionar um conector e informe o endereço do servidor: https://ia-advocacia-mcp.joaoduque87.workers.dev/mcp</li>
+<li>Salve e habilite o conector na conversa.</li>
+<li>Será aberto o fluxo de login. Entre com o mesmo e-mail utilizado na sua compra. Caso o seu e-mail ainda não esteja autorizado, você verá uma página com orientação para se tornar aluno.</li>
+</ol>
+<h2>Como usar</h2>
+<p>O conector é acionado em linguagem natural, sem comandos especiais. Alguns exemplos:</p>
+<p>Para ver tudo o que está disponível, digite "menu".</p>
+<p>Para iniciar um procedimento, descreva o que precisa, como "preciso fazer uma contestação" ou "faça uma análise jurídica deste caso". Nos procedimentos de múltiplas etapas, o conector conduz você passo a passo e pergunta, ao fim de cada etapa, se deseja avançar.</p>
+<p>Para pesquisar precedentes, peça "pesquise jurisprudência sobre [tema]". O conector aplica um protocolo que orienta a consulta em fontes oficiais e exige a inclusão do link de verificação de cada julgado citado.</p>
+<p>Para produzir várias peças de uma vez, em ambientes com pasta de trabalho, peça algo como "rode as peças da pasta". O conector retorna o protocolo de orquestração adequado. Em uma conversa comum, ele orienta o uso de um ambiente apropriado para o processamento em lote.</p>
+<h2>Como o conteúdo é tratado</h2>
+<p>Quando você aciona uma ferramenta, o servidor devolve apenas um roteiro de trabalho. O conteúdo do seu caso permanece no seu cliente de inteligência artificial e não é enviado ao servidor do conector. O servidor não produz a peça por conta própria; quem a produz é a inteligência artificial do seu cliente, seguindo o roteiro.</p>
+<h2>Recomendações de uso responsável</h2>
+<p>Remova dados sigilosos e informações sensíveis antes de submeter qualquer documento ao seu cliente de inteligência artificial, sobretudo em processos sob sigilo. Essa cautela está alinhada à Resolução CNJ nº 615/2025, disponível em https://atos.cnj.jus.br/atos/detalhar/6001.</p>
+<p>Faça sempre a revisão humana do material gerado. A ferramenta é um apoio à produção e não substitui a análise e a responsabilidade do profissional. Nenhuma peça deve ser protocolada sem conferência.</p>
+<p>Confira as condições de tratamento e de retenção de dados do seu cliente de inteligência artificial. O uso por meio do conector não está abrangido por eventuais acordos de retenção zero que você mantenha em outros contextos.</p>
+<h2>Suporte</h2>
+<p>Para dúvidas, problemas de acesso ou sugestões, entre em contato pelo e-mail [email protected].</p>
+<footer>Assessor de Advogado IA. Documento publicado por RAIO-X DO EDITAL CURSOS JURIDICOS LTDA.</footer>
+</div></body></html>
