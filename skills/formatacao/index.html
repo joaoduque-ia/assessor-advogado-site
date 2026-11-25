@@ -30,6 +30,7 @@ h3{font-size:24px;font-weight:700}
 .steps li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start}
 .steps b{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font:800 22px "Sofia Sans Condensed",sans-serif}
 .steps span{padding-top:9px}
+.uso-passos{margin-top:22px;max-width:760px;gap:16px}
 .pre{margin-top:22px;padding:14px 16px;border-left:4px solid var(--acc);background:var(--card);max-width:62ch}
 .pre strong{display:block;margin-bottom:2px}
 .cards{display:grid;grid-template-columns:minmax(0,640px);gap:20px;margin-top:22px}
@@ -84,11 +85,24 @@ footer a{color:var(--ink);font-weight:600;text-underline-offset:3px}
 
 <section class="band" style="padding-top:0">
   <div class="wrap">
+    <h2>Como usar depois de instalar</h2>
+    <p class="lead" style="color:var(--ink)">Esta é uma skill que cria outra skill. Você a usa uma vez, com as suas peças, e ela gera a <strong>sua skill pessoal de formatação</strong>, com o padrão do seu escritório. É essa segunda skill que você vai usar no dia a dia.</p>
+    <ol class="steps uso-passos" aria-label="Como usar">
+      <li><b>1</b><span>Abra uma conversa nova no Claude, digite <strong>/</strong> e escolha <code>padronizar-formatacao-pecas</code>.</span></li>
+      <li><b>2</b><span>Anexe de 1 a 3 peças suas em .docx, já com a formatação que você usa, e envie.</span></li>
+      <li><b>3</b><span>O Claude analisa a forma das peças (margens, fonte, recuos, citações, títulos, assinatura, logo), sem copiar o conteúdo, e mostra um cartão com a sua nova skill pessoal, com um nome como <code>formatacao-seu-escritorio</code>. Toque em <strong>Salvar</strong>.</span></li>
+      <li><b>4</b><span>Pronto. Sempre que for gerar ou formatar uma peça, digite <strong>/</strong> e escolha a sua skill (<code>/formatacao-seu-escritorio</code>). Se também instalar a skill de estilo de redação, use as duas: primeiro o estilo, depois a formatação.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band" style="padding-top:0">
+  <div class="wrap">
     <h2>Se algo não sair como esperado</h2>
     <div class="help">
       <div><h3>Não apareceu o botão Salvar</h3><p>No computador, toque em <em>Baixar .zip</em> no cartão da skill e envie o arquivo em Personalizar &gt; Skills &gt; + &gt; Criar skill &gt; Enviar uma skill. Esse também é o caminho oficial, se preferir.</p></div>
       <div><h3>O botão Copiar não funcionou</h3><p>Abra <em>Copiar manualmente</em> no cartão da skill, toque e segure no texto, escolha Selecionar tudo e depois Copiar.</p></div>
-      <div><h3>A skill não é usada</h3><p>Confira em Personalizar &gt; Skills se ela está ativada e comece uma conversa nova. Para chamar direto, escreva o nome da skill no pedido.</p></div>
+      <div><h3>A skill não é usada</h3><p>Confira em Personalizar &gt; Skills se ela está ativada e comece uma conversa nova. Para chamar direto, digite / e escolha a skill pelo nome.</p></div>
     </div>
   </div>
 </section>
@@ -107,10 +121,10 @@ footer a{color:var(--ink);font-weight:600;text-underline-offset:3px}
   const skills = [
     {id:'padronizar-formatacao-pecas', titulo:'Formatação das peças', tag:'Skill de formatação',
      texto:'Lê uma ou mais petições suas em .docx e cria uma skill pessoal com a formatação do escritório: margens, fonte, recuos, citações, títulos, assinatura e logo.',
-     uso:'Depois de instalar: anexe de 1 a 3 peças em .docx e peça "use a skill padronizar-formatacao-pecas".'},
+     uso:'Depois de instalar: digite / e escolha padronizar-formatacao-pecas. Veja abaixo como usar.'},
     {id:'padronizar-estilo-escrita', titulo:'Estilo de escrita', tag:'Skill de estilo',
      texto:'Lê de 3 a 10 peças suas e cria uma skill com o seu jeito de redigir: tamanho dos parágrafos, aberturas, conectivos, fórmulas e vocabulário, com conferência da minuta antes da entrega.',
-     uso:'Depois de instalar: anexe de 3 a 10 peças em .docx escritas sem IA e peça "use a skill padronizar-estilo-escrita".'}
+     uso:'Depois de instalar: digite / e escolha padronizar-estilo-escrita. Veja abaixo como usar.'}
   ];
   const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
   const cards = document.getElementById('cards');
